@@ -1,0 +1,293 @@
+{
+  "version": "36.0.0",
+  "artifacts": {
+    "Cdk2Stack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "Cdk2Stack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "Cdk2Stack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "Cdk2Stack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/de0f40dd19b84b50577a1a0a9ac15c4df427ff36d7bf2515e1b1e925e98e71e3.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "Cdk2Stack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "Cdk2Stack.assets"
+      ],
+      "metadata": {
+        "/Cdk2Stack/UserTable/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UserTableBD4BF69E"
+          }
+        ],
+        "/Cdk2Stack/GetUsersLambda/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GetUsersLambdaServiceRoleA2144AFC"
+          }
+        ],
+        "/Cdk2Stack/GetUsersLambda/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GetUsersLambdaServiceRoleDefaultPolicy71D4E53F"
+          }
+        ],
+        "/Cdk2Stack/GetUsersLambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GetUsersLambda4ACBBAFD"
+          }
+        ],
+        "/Cdk2Stack/GetUserLambda/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GetUserLambdaServiceRole15307360"
+          }
+        ],
+        "/Cdk2Stack/GetUserLambda/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GetUserLambdaServiceRoleDefaultPolicyFC935682"
+          }
+        ],
+        "/Cdk2Stack/GetUserLambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GetUserLambda881D1138"
+          }
+        ],
+        "/Cdk2Stack/CreateUserLambda/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CreateUserLambdaServiceRoleAFE39E4A"
+          }
+        ],
+        "/Cdk2Stack/CreateUserLambda/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CreateUserLambdaServiceRoleDefaultPolicyC1FA6D44"
+          }
+        ],
+        "/Cdk2Stack/CreateUserLambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CreateUserLambda0154A2EB"
+          }
+        ],
+        "/Cdk2Stack/UpdateUserLambda/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UpdateUserLambdaServiceRole3C5AB556"
+          }
+        ],
+        "/Cdk2Stack/UpdateUserLambda/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UpdateUserLambdaServiceRoleDefaultPolicy3539AF19"
+          }
+        ],
+        "/Cdk2Stack/UpdateUserLambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UpdateUserLambda9D1E8B10"
+          }
+        ],
+        "/Cdk2Stack/DeleteUserLambda/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DeleteUserLambdaServiceRole5E37A90C"
+          }
+        ],
+        "/Cdk2Stack/DeleteUserLambda/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DeleteUserLambdaServiceRoleDefaultPolicyCDE1D3BE"
+          }
+        ],
+        "/Cdk2Stack/DeleteUserLambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DeleteUserLambdaF75E2C54"
+          }
+        ],
+        "/Cdk2Stack/MyApi/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyApi49610EDF"
+          }
+        ],
+        "/Cdk2Stack/MyApi/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyApiDeploymentECB0D05E1cbd76a87f0783f903a0553dee5f22cd"
+          }
+        ],
+        "/Cdk2Stack/MyApi/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyApiDeploymentStageprodE1054AF0"
+          }
+        ],
+        "/Cdk2Stack/MyApi/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyApiEndpoint869ABE96"
+          }
+        ],
+        "/Cdk2Stack/MyApi/Default/users/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyApiusersDA486006"
+          }
+        ],
+        "/Cdk2Stack/MyApi/Default/users/GET/ApiPermission.Cdk2StackMyApi7BFD9831.GET..users": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyApiusersGETApiPermissionCdk2StackMyApi7BFD9831GETusersC708E93A"
+          }
+        ],
+        "/Cdk2Stack/MyApi/Default/users/GET/ApiPermission.Test.Cdk2StackMyApi7BFD9831.GET..users": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyApiusersGETApiPermissionTestCdk2StackMyApi7BFD9831GETusersB69528F8"
+          }
+        ],
+        "/Cdk2Stack/MyApi/Default/users/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyApiusersGET0121E474"
+          }
+        ],
+        "/Cdk2Stack/MyApi/Default/users/POST/ApiPermission.Cdk2StackMyApi7BFD9831.POST..users": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyApiusersPOSTApiPermissionCdk2StackMyApi7BFD9831POSTusers9BD0D038"
+          }
+        ],
+        "/Cdk2Stack/MyApi/Default/users/POST/ApiPermission.Test.Cdk2StackMyApi7BFD9831.POST..users": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyApiusersPOSTApiPermissionTestCdk2StackMyApi7BFD9831POSTusers7C912FAC"
+          }
+        ],
+        "/Cdk2Stack/MyApi/Default/users/POST/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyApiusersPOST4D577945"
+          }
+        ],
+        "/Cdk2Stack/MyApi/Default/users/{userId}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyApiusersuserId33866F04"
+          }
+        ],
+        "/Cdk2Stack/MyApi/Default/users/{userId}/GET/ApiPermission.Cdk2StackMyApi7BFD9831.GET..users.{userId}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyApiusersuserIdGETApiPermissionCdk2StackMyApi7BFD9831GETusersuserId19F5C1BB"
+          }
+        ],
+        "/Cdk2Stack/MyApi/Default/users/{userId}/GET/ApiPermission.Test.Cdk2StackMyApi7BFD9831.GET..users.{userId}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyApiusersuserIdGETApiPermissionTestCdk2StackMyApi7BFD9831GETusersuserId5AB49751"
+          }
+        ],
+        "/Cdk2Stack/MyApi/Default/users/{userId}/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyApiusersuserIdGET83981268"
+          }
+        ],
+        "/Cdk2Stack/MyApi/Default/users/{userId}/PUT/ApiPermission.Cdk2StackMyApi7BFD9831.PUT..users.{userId}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyApiusersuserIdPUTApiPermissionCdk2StackMyApi7BFD9831PUTusersuserIdC60ED350"
+          }
+        ],
+        "/Cdk2Stack/MyApi/Default/users/{userId}/PUT/ApiPermission.Test.Cdk2StackMyApi7BFD9831.PUT..users.{userId}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyApiusersuserIdPUTApiPermissionTestCdk2StackMyApi7BFD9831PUTusersuserId4CE2C161"
+          }
+        ],
+        "/Cdk2Stack/MyApi/Default/users/{userId}/PUT/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyApiusersuserIdPUTB04DAEF7"
+          }
+        ],
+        "/Cdk2Stack/MyApi/Default/users/{userId}/DELETE/ApiPermission.Cdk2StackMyApi7BFD9831.DELETE..users.{userId}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyApiusersuserIdDELETEApiPermissionCdk2StackMyApi7BFD9831DELETEusersuserIdD974F8D2"
+          }
+        ],
+        "/Cdk2Stack/MyApi/Default/users/{userId}/DELETE/ApiPermission.Test.Cdk2StackMyApi7BFD9831.DELETE..users.{userId}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyApiusersuserIdDELETEApiPermissionTestCdk2StackMyApi7BFD9831DELETEusersuserId553B8594"
+          }
+        ],
+        "/Cdk2Stack/MyApi/Default/users/{userId}/DELETE/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyApiusersuserIdDELETEDC44C771"
+          }
+        ],
+        "/Cdk2Stack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/Cdk2Stack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/Cdk2Stack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/Cdk2Stack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "Cdk2Stack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
